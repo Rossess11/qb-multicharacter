@@ -1,0 +1,160 @@
+@font-face {
+    font-family: regularD;
+    src: url('DAZNOscine-Regular.ttf');
+}
+
+.container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.characters-grid {
+    display: flex;
+    height: 300px;
+    width: 400px;
+    position: absolute;
+    left: 2%;
+    top: 30%;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: rgb(13, 22, 27);
+    height: auto;
+    transition: all 1s;
+    opacity: 0;
+}
+
+.characters-header {
+    font-family: regularD;
+    background-color: rgb(226, 247, 54);
+    color: rgb(13, 22, 27);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 5px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.character-card {
+    color: grey;
+    font-family: regularD;
+    display: flex;
+    box-shadow: 0 0 1px 0 grey;
+}
+
+.character-info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.select-btn {
+    border: none;
+    width: 20%;
+    background-image: url('hand1.svg');
+    background-color: rgb(31, 40, 44);
+    background-size: 40% 40%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-position: center;
+}
+
+.character-profile {
+    width: 25%;
+    background-image: url('user.svg');
+    background-color: rgb(31, 40, 44);
+    background-size: 40% 40%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-position: center;
+}
+
+#new-character {
+    position: absolute;
+    left: 2%;
+    top: 25%;
+    font-family: regularD;
+    border: none;
+    background-color: rgb(13, 22, 27);
+    color: grey;
+    padding-top: 5px;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: all 1s;
+    opacity: 0;
+}
+
+#new-character:hover {
+    transform:scale(1.1);
+}
+
+#disconnect-btn {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    border: none;
+    padding-top: 5px;
+    background-color: rgb(13, 22, 27);
+    color: grey;
+    font-weight: bold;
+    font-family: regularD;
+    border-radius: 3px;
+    transition: all 1s;
+    opacity: 0;
+}
+
+#disconnect-btn:hover {
+    transform:scale(1.1);
+}
+
+#select-character {
+    position: absolute;
+    border: none;
+    background-color: rgb(13, 22, 27);
+    right: 1%;
+    bottom: 2%;
+    width: 200px;
+    height: 50px;
+    background-image: url('play.svg');
+    background-position: center;
+    background-size: 40% 40%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-radius: 3px;
+    display: none;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#select-character:hover {
+    transform:scale(1.1);
+}
+
+.creation-form {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    left: 40%;
+    top: 25%;
+    overflow: hidden;
+    font-family: regularD;
+    background-color:rgb(13, 22, 27);
+    color: lightgrey;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    gap: 10px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Selección de Personajes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://kit.fontawesome.com/afab87ce15.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="characters-container" class="characters-grid">
+            <div class="characters-header">PERSONAJES</div>
+            <div class="character-card">
+                <div class="character-profile"></div>
+                <div class="character-info">
+                    <a style="color: lightgrey; font-size: 14px;">Javier Pepino</a>
+                    28/02/2002<br>
+                    España
+                </div>
+                <button class="select-btn" data-index="${index}"></button>
+            </div>
+            
+        </div>
+        
+        <div id="creation-form" class="creation-form" style="display: none;">
+            <div style="width: 100%; background-color: rgb(226, 247, 54); color: rgb(13, 22, 27); padding: 5px; font-weight: bold; text-transform: uppercase; font-size: 12px;";>Nuevo Personaje</div>
+            <div style="width: 100%; color: lightgrey; font-size:12px; width: 100%; padding: 5px;">Nombre</div>
+            <input type="text" id="firstname" placeholder="Nombre" required style="border: none; width: 100%; padding: 5px; font-size: 12px; background-color: rgb(31, 40, 44); color: white;">
+            <div style="width: 100%; color: lightgrey; font-size:12px; width: 100%; padding: 5px;">Apellido</div>
+            <input type="text" id="lastname" placeholder="Apellido" required style="border: none; width: 100%; padding: 5px; font-size: 12px; background-color: rgb(31, 40, 44); color: white;">
+            
+            <div class="gender-select" style="width: 100%; display: flex; justify-content: center; align-items: center; text-align: center; height: 40px; gap: 20px;">
+                <label>
+                    <input type="radio" name="gender" value="0" required>
+                    <span style="color: lighgrey; font-size: 12px;">Hombre</span>
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="1" required>
+                    <span style="color: lighgrey; font-size: 12px;">Mujer</span>
+                </label>
+            </div>
+
+            <div style="width: 100%; color: lightgrey; font-size:12px; width: 100%; padding: 5px;">Fecha de Nacimiento</div>
+            <input type="date" id="birthdate" required style="border: none; width: 97%; font-size: 12px; background-color: rgb(31, 40, 44); color: lightgrey; padding: 5px;">
+            <div style="width: 100%; color: lightgrey; font-size:12px; width: 100%; padding: 5px;">Nacionalidad</div>
+            <select id="nationality" style="border: none; width: 99%; font-size: 12px; background-color: rgb(31, 40, 44); color: lightgrey; padding: 5px;">
+                <option value="us">Estados Unidos</option>
+                <option value="mx">México</option>
+                <option value="es">España</option>
+                <option value="fr">Francia</option>
+                <option value="de">Alemania</option>
+                <!-- Opciones de nacionalidad se pueden poblar dinámicamente -->
+            </select>
+            
+            <div class="form-buttons">
+                <button id="confirm-create" style="border: none; background-color: rgb(226, 247, 54); color: rgb(13, 22, 27); font-family: regularD; border-radius: 3px; padding: 2px;">Confirmar</button>
+                <button id="cancel-create" style="border: none; background-color: rgb(31, 40, 44); color: lightgrey; font-family: regularD; border-radius: 3px; padding: 2px;">Cancelar</button>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button id="new-character">+ NUEVO PERSONAJE</button>
+            <button id="disconnect-btn"><i class="fa-solid fa-moon"></i>LOG OUT</button>
+            <button id="select-character"></button>
+        </div>
+    </div>
+    <script src="character.js"></script>
+</body>
+</html>
